@@ -1,5 +1,7 @@
-import Display from './components/BotsDisplay';
+// import Display from './components/BotsDisplay';
 import './App.css';
+import Display from './components/BotsDisplay';
+// import BotsPage from './components/BotsPage';
 
 function App() {
   return (

@@ -1,69 +1,107 @@
 import React from "react";
-import Collection from "./BotList";
+import BotCard from "./BotCard";
 
-function BotsCollection({bots}) {
-  let botsList = bots.map((item)=> {
-    return <Collection
-    key={item.id} 
-    name={item.name}
-    health ={item.health}
-    damage={item.damage}
-    armor={item.armor}
-    bot_class={item.bot_class}
-    catchphrase={item.catchphrase}
-    avatar_url={item.avatar_url}
-    created_at={item.created_at}
-    updated_at ={item.updated_at}
-    />;
-  })
-  return (
-   <div>
-           
-    <div className="card " >
-  <div className="card-body">
- <small>
-  {botsList}
- </small>
-  {/* <div className="ui column">
-      <div className="ui card" key={botsList.id}>
-        <div className="image">
-          <img alt="oh no!" src={botsList.avatar_url} />
-        </div>
-        <div className="content">
-          <div className="header">
-            {botsList.name}
-          </div>
-          <div className="meta text-wrap">
-            <small>{botsList.catchphrase}</small>
-          </div>
-        </div>
-        <div className="extra content">
-          <span>
-            <i className="icon heartbeat" />
-            {botsList.health}
-          </span>
-
-          <span>
-            <i className="icon lightning" />
-            {botsList.damage}
-          </span>
-          <span>
-            <i className="icon shield" />
-            {botsList.armor}
-          </span>
-          <span>
-           
-          </span>
-        </div>
-      </div>
-    </div> */}
-
-  </div>
-</div>
-</div>
+function BotCollection({ bots }) {
+  // Your code here
+  const botItem = bots.map((bot) => {
+    return (
+      <BotCard
+        key={bot.id}
+        bot={bot}
        
-    
+      />
+    );
+  });
+  return (
+    <div className="bot">
+      <div className="row">
+        {/*...and here..*/}
+        {botItem}
+      </div>
+    </div>
   );
 }
 
-export default BotsCollection;
+export default BotCollection;
+
+// import React from "react";
+// // import Collection from "./BotCard";
+
+// function BotsCollection({bot}) {
+//   // let botsList = bots.map((item)=> {
+//   //   return <Collection
+//   //   key={item.id} 
+//   //   name={item.name}
+//   //   health ={item.health}
+//   //   damage={item.damage}
+//   //   armor={item.armor}
+//   //   bot_class={item.bot_class}
+//   //   catchphrase={item.catchphrase}
+//   //   avatar_url={item.avatar_url}
+//   //   created_at={item.created_at}
+//   //   updated_at ={item.updated_at}
+//   //   />;
+//   // })
+//   return (
+//     <table className="table">
+//     <tbody>
+//       <tr>
+//         <th>
+//           <h3 className="date">{bot.name}</h3>
+//         </th>
+//         <th>
+//           <h3 className="description">{bot.health}</h3>
+//         </th>
+//         <th>
+//           <h3 className="category">{bot.damage}</h3>
+//         </th>
+//         <th>
+//           <h3 className="amount">{bot.armor}</h3>
+//         </th>
+//         <th>
+//           <h3 className="amount">{bot.bot_class}</h3>
+//         </th>
+//         <th>
+//           <h3 className="amount">{bot.catchphrase}</h3>
+//         </th>
+//         <th className="avatarimg">
+//           <img src={bot.avatar_url} alt="url" className="img">
+
+//           </img>
+//         </th>
+//         <th>
+//           <h3 className="amount">{bot.created_at}</h3>
+//         </th>
+//         <th>
+//           <h3 className="amount">{bot.updated_at}</h3>
+//         </th>
+//       </tr>
+//       {/* {botsList} */}
+//     </tbody>
+//   </table>
+//    );
+//   }
+
+//   export default BotsCollection;
+//     <div className="container mt-4">
+// <div className="row">
+  
+//    {botsList}
+
+
+// </div>
+
+// </div>
+
+//     <div className='col-3 p-2'>
+           
+//     <div className="card">
+//   <div className="card-body">
+
+//   {botsList}
+//   </div>
+
+ 
+// </div>
+// </div> 
+    
