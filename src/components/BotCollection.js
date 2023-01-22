@@ -1,7 +1,7 @@
 import React from "react";
 import Collection from "./BotList";
 
-function BotCollection({bots}) {
+function BotsCollection({bots}) {
   let botsList = bots.map((item)=> {
     return <Collection
     key={item.id} 
@@ -18,10 +18,52 @@ function BotCollection({bots}) {
   })
   return (
    <div>
-        {botsList}
+           
+    <div className="card " >
+  <div className="card-body">
+ <small>
+  {botsList}
+ </small>
+  {/* <div className="ui column">
+      <div className="ui card" key={botsList.id}>
+        <div className="image">
+          <img alt="oh no!" src={botsList.avatar_url} />
         </div>
+        <div className="content">
+          <div className="header">
+            {botsList.name}
+          </div>
+          <div className="meta text-wrap">
+            <small>{botsList.catchphrase}</small>
+          </div>
+        </div>
+        <div className="extra content">
+          <span>
+            <i className="icon heartbeat" />
+            {botsList.health}
+          </span>
+
+          <span>
+            <i className="icon lightning" />
+            {botsList.damage}
+          </span>
+          <span>
+            <i className="icon shield" />
+            {botsList.armor}
+          </span>
+          <span>
+           
+          </span>
+        </div>
+      </div>
+    </div> */}
+
+  </div>
+</div>
+</div>
+       
     
   );
 }
 
-export default BotCollection;
+export default BotsCollection;
