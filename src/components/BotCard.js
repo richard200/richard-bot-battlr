@@ -11,42 +11,44 @@ import React from "react";
 
 function BotCard({ bot }) {
   return (
-    <table className="table">
-    <tbody>
-      <tr>
-        <th>
+
+ <div className="card col-4">
+    <div className="card-body">
+ 
+   
           <h3 className="date">Name: {bot.name}</h3>
-        </th>
-        <th>
+        
           <h3 className="description">Description: {bot.health}</h3>
-        </th>
-        <th>
+       
           <h3 className="category">Damage: {bot.damage}</h3>
-        </th>
-        <th>
+       
           <h3 className="amount">Armor: {bot.armor}</h3>
-        </th>
-        <th>
+       
+        {/* <th>
           <h3 className="amount">BotClass: {bot.bot_class}</h3>
-        </th>
-        <th>
-          <h3 className="amount">Catchphrase: {bot.catchphrase}</h3>
-        </th>
-        <th className="avatarimg">
+        </th> */}
+     
+          <h3 className="amount"></h3>
+          <p>
+              <strong>Catchphrase: </strong>
+              {bot.catchphrase}
+            </p>
+            {/* Catchphrase: {bot.catchphrase}</h3> */}
+      
+      
           <img src={bot.avatar_url} alt="url" className="img"> 
 
           </img>
-        </th>
-        <th>
+        
+        {/* <th>
           <h3 className="amount">Created At: {bot.created_at}</h3>
         </th>
         <th>
           <h3 className="amount">Updated At: {bot.updated_at}</h3>
-        </th>
-      </tr>
-      {/* {botsList} */}
-    </tbody>
-  </table>
+        </th> */}
+ 
+  </div>
+  </div>
    );
   }
 
