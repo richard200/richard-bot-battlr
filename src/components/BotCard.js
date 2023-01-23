@@ -9,14 +9,18 @@ import React from "react";
 //   Captain: "icon star",
 // };
 
-function BotCard({ bot }) {
+function BotCard({ bot, clickEvent, deleteBot }) {
   return (
 
- <div className="card col-4">
-    <div className="card-body">
+ <div className="card col-4 mt-5 h-100 shadow p-3 mb-5 bg-body rounded">
+    <div className="card-body" key={bot.id}
+        onClick={() => clickEvent(bot)}
+      >
  
    
-          <h3 className="date">Name: {bot.name}</h3>
+          <h3 className="date" onClick={() => clickEvent(bot)}>Name: {bot.name}
+          
+          </h3>
         
           <h3 className="description">Description: {bot.health}</h3>
        
@@ -46,7 +50,14 @@ function BotCard({ bot }) {
         <th>
           <h3 className="amount">Updated At: {bot.updated_at}</h3>
         </th> */}
- 
+      <button className="btn btn-warning"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  deleteBot(bot);
+                }}
+              >
+                delete
+              </button>
   </div>
   </div>
    );
