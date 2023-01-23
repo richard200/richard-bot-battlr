@@ -3,7 +3,7 @@ import BotCard from "./BotCard";
 
 function BotArmy ({bots, removeBot, deleteBot}){
 
-    const myBotArmy =  bots.map((bot)=>{
+    let myBotArmy =  bots.map((bot)=>{
         return (
             <BotCard
             key={bot.id}
