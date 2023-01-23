@@ -1,13 +1,5 @@
 import React from "react";
 
-// const botTypeClasses = {
-//   Assault: "icon military",
-//   Defender: "icon shield",
-//   Support: "icon plus circle",
-//   Medic: "icon ambulance",
-//   Witch: "icon magic",
-//   Captain: "icon star",
-// };
 
 function BotCard({ bot, clickEvent, deleteBot }) {
   return (
@@ -65,91 +57,5 @@ function BotCard({ bot, clickEvent, deleteBot }) {
   }
 
   export default BotCard;
-//   return (
-//     <div className="ui column">
-//       <div className="ui card" key={bot.id} onClick={() => clickEvent(bot)}>
-//         <div className="image">
-//           <img alt="oh no!" src={bot.avatar_url} />
-//         </div>
-//         <div className="content">
-//           <div className="header">
-//             {bot.name}
-//             <i className={botTypeClasses[bot.bot_class]} />
-//           </div>
-//           <div className="meta text-wrap">
-//             <small>{bot.catchphrase}</small>
-//           </div>
-//         </div>
-//         <div className="extra content">
-//           <span>
-//             <i className="icon heartbeat" />
-//             {bot.health}
-//           </span>
 
-//           <span>
-//             <i className="icon lightning" />
-//             {bot.damage}
-//           </span>
-//           <span>
-//             <i className="icon shield" />
-//             {bot.armor}
-//           </span>
-//           <span>
-//             <div className="ui center aligned segment basic">
-//               <button
-//                 className="ui mini red button"
-//                 onClick={(event) => {
-//                   event.stopPropagation();
-//                   deleteBot(bot);
-//                 }}
-//               >
-//                 x
-//               </button>
-//             </div>
-//           </span>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 
-// export default BotCard;
-// import React from "react";
-
-//  <div className="card">
-//     <div className="card-body">
-
-// <div className="row">
-// <div className="col">
-//         <span>Name: {name}</span>
-//         </div>
-//         <div className="col">
-//         <span>Health: {health}</span>
-//         </div>
-//         <div className="col">
-//         <span>Damage: {damage}</span>
-//         </div>
-//         <div className="col">
-//         <span>Armor: {armor}</span>
-//         </div>
-//         <div className="col">
-//         <span>Class: {bot_class}</span>
-//         </div>
-//         <div className="col">
-//         <span>Catchphrase: {catchphrase}</span>
-//         </div>
-//         <div className="col">
-//         <span>Image: {avatar_url}</span>
-//         </div>
-//         <div className="col">
-//         <span>Created: {created_at}</span>
-//         </div>
-//         <div className="col">
-//         <span>Updated: {updated_at}</span>
-//         </div>
-//         {/* <td>{amount}</td> */}
-      
-//     </div>
-//     </div>
-//     </div>
-  
