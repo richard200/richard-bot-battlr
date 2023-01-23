@@ -1,23 +1,23 @@
 import React from "react";
 import BotCard from "./BotCard";
 
-function BotCollection({ bots, enlistBot, deleteBot }) {
+function BotCollection({ bots, addBot, deleteBot }) {
   // Your code here
   const botItem = bots.map((bot) => {
     return (
       <BotCard
         key={bot.id}
         bot={bot}
-        clickEvent={enlistBot}
+        clickEvent={addBot}
         deleteBot={deleteBot}
        
       />
     );
   });
   return (
-    <div className="bot">
+    <div className="container mt-4">
       <div className="row">
-        {/*...and here..*/}
+      
         {botItem}
       </div>
     </div>

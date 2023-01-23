@@ -12,17 +12,18 @@ import React from "react";
 function BotCard({ bot, clickEvent, deleteBot }) {
   return (
 
- <div className="card col-4 mt-5 h-100 shadow p-3 mb-5 bg-body rounded">
-    <div className="card-body" key={bot.id}
+ <div className="card col-4 mt-5 h-100 shadow p-3 mb-5 bg-body rounded"
+ key={bot.id}
         onClick={() => clickEvent(bot)}
-      >
+ >
+    <div className="card-body"  >
  
    
           <h3 className="date" onClick={() => clickEvent(bot)}>Name: {bot.name}
           
           </h3>
         
-          <h3 className="description">Description: {bot.health}</h3>
+          <h3 className="description">Health: {bot.health}</h3>
        
           <h3 className="category">Damage: {bot.damage}</h3>
        
@@ -56,7 +57,7 @@ function BotCard({ bot, clickEvent, deleteBot }) {
                   deleteBot(bot);
                 }}
               >
-                delete
+                Delete
               </button>
   </div>
   </div>

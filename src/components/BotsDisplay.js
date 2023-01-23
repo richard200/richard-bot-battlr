@@ -1,36 +1,38 @@
 import React, { useEffect, useState } from "react";
 import BotsCollection from "./BotCollection";
-import BotListArmy from "./YourBotArmy";
+import BotArmy from "./YourBotArmy";
+
 function Display() {
   let [bots, setBot] = useState([])
 
   useEffect(() => {
     fetch("http://localhost:3000/bots")
       .then((resp) => resp.json())
-      .then(bots => setBot(bots))
+      .then(data => setBot(data))
   }, [])
 
-  const enlistBot= (bot)=>{
+  let addBot= (bot)=>{
     setBot(bots.map((b)=>(b.id === bot.id ? {...b, army:true} : b)))
 }
-const removeBot =(bot)=>{
+let removeBot =(bot)=>{
     setBot(bots.map((b)=>(b.id === bot.id ? {...b, army:false} : b)))
 }
 
-const deleteBot = (bot)=>{
-    const botRemoved =  bot.filter((b)=> b.id !==bot.id);
-    setBot((bots)=>botRemoved)
+let deleteBot = (bot)=>{
+    let botRemoved =  bots.filter((b)=> b.id !==bot.id);
+    setBot((bot)=>botRemoved)
 }
   return (
     <div>
-    <BotListArmy
+    <BotArmy
             bots={bots.filter((b)=>b.army)}
             removeBot={removeBot}
             deleteBot={deleteBot}
             
             />
- <BotsCollection bots= {bots}
-            enlistBot={enlistBot}
+ <BotsCollection 
+            bots= {bots}
+            addBot={addBot}
             deleteBot={deleteBot}
  />
  </div>
